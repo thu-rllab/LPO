@@ -1,0 +1,10 @@
+working_dir: ./
+excludes: ["/.git/", "/.aws/", "/.codex/", "/.agents/", "/.env", "/.env.*", "/models/", "/data/", "/ckpts/", "/outputs/", "/wandb/", "*.whl"]
+env_vars:
+  TORCH_NCCL_AVOID_RECORD_STREAMS: "1"
+  # If you are using vllm<=0.6.3, you might need to set the following environment variable to avoid bugs:
+  # VLLM_ATTENTION_BACKEND: "XFORMERS"
+  CUDA_DEVICE_MAX_CONNECTIONS: "1"
+  GLOO_SOCKET_FAMILY: "IPv4"
+  NCCL_SOCKET_FAMILY: "AF_INET"
+  NCCL_DEBUG: "INFO"

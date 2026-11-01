@@ -1,0 +1,49 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  gen_batch_size: ${data.train_batch_size}
+  save_gen_data: False
+
+
+actor_rollout_ref:
+  model:
+    use_shm: True   # copy model into /dev/shm after local cache for fast multi-worker loading
+  actor:
+    use_kl_loss: False
+    loss_mode: "lpo"   # "lpo" = custom LPO actor | "grpo" = standard verl PPO/GRPO actor
+    lpo_trust_lmd: 1            # λ₂: MD step-size / trust-region anchor weight
+    lpo_ref_lmd: 0.0
+    lpo_metric: "advantages"
+    lpo_listwise_contrastive: True   # subtract current policy group-softmax from target weights (listwise contrastive distillation)
+    lpo_projection: "forward_kl"
+
+    filter_all_failed: False
+    filter_all_succeeded: False
+
+
+reward_model:
+  reward_manager: deepscaler
+  overlong_buffer:
+    enable: False
+    len: 0
+    penalty_factor: 0.0
+    log: False
+
+algorithm:
+  filter_groups:
+    enable: False
+    metric: null
+    max_num_gen_batches: 0
+    filter_min: 0.0
+    filter_max: 1.0
+  batch_std_in_grpo: False
+
+
+trainer:
+  project_name: verl-lpo

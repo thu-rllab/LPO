@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "LPO: Listwise Policy Optimization"
+type: software
+license: Apache-2.0
+authors:
+  - family-names: Qu
+    given-names: Yun
+  - family-names: Wang
+    given-names: Qi
+  - family-names: Mao
+    given-names: Yixiu
+  - family-names: Zou
+    given-names: Heming
+  - family-names: Jiang
+    given-names: Yuhang
+  - family-names: Li
+    given-names: Yingyue
+  - family-names: Xu
+    given-names: Wutong
+  - family-names: Cai
+    given-names: Lizhou
+  - family-names: Liu
+    given-names: Weijie
+  - family-names: Bai
+    given-names: Clive
+  - family-names: Yang
+    given-names: Kai
+  - family-names: Chen
+    given-names: Yangkun
+  - family-names: Yang
+    given-names: Saiyong
+  - family-names: Ji
+    given-names: Xiangyang
+preferred-citation:
+  type: article
+  title: "Listwise Policy Optimization: Group-based RLVR as Target-Projection on the LLM Response Simplex"
+  authors:
+    - family-names: Qu
+      given-names: Yun
+    - family-names: Wang
+      given-names: Qi
+    - family-names: Mao
+      given-names: Yixiu
+    - family-names: Zou
+      given-names: Heming
+    - family-names: Jiang
+      given-names: Yuhang
+    - family-names: Li
+      given-names: Yingyue
+    - family-names: Xu
+      given-names: Wutong
+    - family-names: Cai
+      given-names: Lizhou
+    - family-names: Liu
+      given-names: Weijie
+    - family-names: Bai
+      given-names: Clive
+    - family-names: Yang
+      given-names: Kai
+    - family-names: Chen
+      given-names: Yangkun
+    - family-names: Yang
+      given-names: Saiyong
+    - family-names: Ji
+      given-names: Xiangyang
+  journal: "arXiv preprint arXiv:2605.06139"
+  year: 2026
+  doi: 10.48550/arXiv.2605.06139
+  url: https://arxiv.org/abs/2605.06139
